@@ -50,9 +50,4 @@ public class StudentLocalServiceImpl extends StudentLocalServiceBaseImpl {
 	 * com.blogspot.chingovan.database.service.StudentLocalServiceUtil} to
 	 * access the student local service.
 	 */
-
-	public List<Student> findByGender(boolean gender) {
-
-		return StudentUtil.findByGender(gender);
-	}
 }
