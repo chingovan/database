@@ -16,16 +16,25 @@ package com.blogspot.chingovan.database.service.impl;
 
 import aQute.bnd.annotation.ProviderType;
 
+import java.util.List;
+
+import com.blogspot.chingovan.database.model.Student;
 import com.blogspot.chingovan.database.service.base.StudentLocalServiceBaseImpl;
+import com.blogspot.chingovan.database.service.persistence.StudentUtil;
 
 /**
  * The implementation of the student local service.
  *
  * <p>
- * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link com.blogspot.chingovan.database.service.StudentLocalService} interface.
+ * All custom service methods should be put in this class. Whenever methods are
+ * added, rerun ServiceBuilder to copy their definitions into the
+ * {@link com.blogspot.chingovan.database.service.StudentLocalService}
+ * interface.
  *
  * <p>
- * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
+ * This is a local service. Methods of this service will not have security
+ * checks based on the propagated JAAS credentials because this service can only
+ * be accessed from within the same VM.
  * </p>
  *
  * @author chinv
@@ -37,6 +46,13 @@ public class StudentLocalServiceImpl extends StudentLocalServiceBaseImpl {
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never reference this class directly. Always use {@link com.blogspot.chingovan.database.service.StudentLocalServiceUtil} to access the student local service.
+	 * Never reference this class directly. Always use {@link
+	 * com.blogspot.chingovan.database.service.StudentLocalServiceUtil} to
+	 * access the student local service.
 	 */
+
+	public List<Student> findByGender(boolean gender) {
+
+		return StudentUtil.findByGender(gender);
+	}
 }
