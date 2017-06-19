@@ -14,13 +14,9 @@
 
 package com.blogspot.chingovan.database.service.impl;
 
-import aQute.bnd.annotation.ProviderType;
-
-import java.util.List;
-
-import com.blogspot.chingovan.database.model.Student;
 import com.blogspot.chingovan.database.service.base.StudentLocalServiceBaseImpl;
-import com.blogspot.chingovan.database.service.persistence.StudentUtil;
+
+import aQute.bnd.annotation.ProviderType;
 
 /**
  * The implementation of the student local service.
